@@ -223,6 +223,6 @@ app.get('/getImage/:id', async (req, res) => {
     
 })
 
-app.listen(2001, () => {
+app.listen(process.env.PORT || 2001, () => {
     console.log('noteapp server works!!')
 })
