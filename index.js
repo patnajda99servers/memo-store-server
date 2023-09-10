@@ -54,12 +54,12 @@ dotenv.config()
 
 //database communication
 //const MongoClient = mongodb.MongoClient
-let aliasUri = process.env.ALIAS_MONGODB_URL
+let aliasUri = process.env.MONGODB_URI
 let password = 'NoHablo30082022'
 let db, user_connection
 let conn, client
 
-conn = new MongoClient(`mongodb+srv://patnajda:NoHablo30082022@noteapp.b2kbn3g.mongodb.net/?retryWrites=true&w=majority`)
+conn = new MongoClient(aliasUri)
 try {
     conn.connect()
     db = conn.db("NoteApp")
