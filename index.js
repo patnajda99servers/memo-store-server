@@ -54,12 +54,12 @@ dotenv.config()
 
 //database communication
 //const MongoClient = mongodb.MongoClient
-let aliasUri = process.env.ALIAS_MONGODB_URL
+let aliasUri = process.env.MONGODB_URI
 let password = 'NoHablo30082022'
 let db, user_connection
 let conn, client
 
-conn = new MongoClient(`mongodb+srv://patnajda:NoHablo30082022@noteapp.b2kbn3g.mongodb.net/?retryWrites=true&w=majority`)
+conn = new MongoClient('mongodb+srv://newuser:NDLpkSEhIAId1E7m@noteapp.b2kbn3g.mongodb.net/?retryWrites=true&w=majority')
 try {
     conn.connect()
     db = conn.db("NoteApp")
@@ -223,6 +223,6 @@ app.get('/getImage/:id', async (req, res) => {
     
 })
 
-app.listen(process.env.PORT || 2001, () => {
+app.listen(process.env.PORT || 2000, () => {
     console.log('noteapp server works!!')
 })
