@@ -59,7 +59,7 @@ let password = 'NoHablo30082022'
 let db, user_connection
 let conn, client
 
-conn = new MongoClient(aliasUri)
+conn = new MongoClient('mongodb+srv://newuser:NDLpkSEhIAId1E7m@noteapp.b2kbn3g.mongodb.net/?retryWrites=true&w=majority')
 try {
     conn.connect()
     db = conn.db("NoteApp")
@@ -223,6 +223,6 @@ app.get('/getImage/:id', async (req, res) => {
     
 })
 
-app.listen(process.env.PORT || 2001, () => {
+app.listen(process.env.PORT || 2000, () => {
     console.log('noteapp server works!!')
 })
